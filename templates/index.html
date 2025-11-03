@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Home - YouTube Optimization Toolkit{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="text-center mb-5 fade-in">
+        <h1 class="display-4 mb-3">YouTube Optimization Toolkit</h1>
+        <p class="lead text-muted">Professional-grade tools for content creators</p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Thumbnail Downloader Card -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card tool-card h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-image tool-icon"></i>
+                    <h3 class="h4 mb-3">Thumbnail Downloader</h3>
+                    <p class="text-muted mb-4">Get high-quality thumbnails from any YouTube video</p>
+                    <a href="/youtube" class="btn btn-primary px-4">
+                        <i class="bi bi-download me-2"></i>Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tag Generator Card -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card tool-card h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-tags tool-icon"></i>
+                    <h3 class="h4 mb-3">SEO Generators</h3>
+                    <div class="list-group list-group-flush mb-4">
+                        <a href="/tag-generator" class="list-group-item list-group-item-action">Tag Generator</a>
+                        <a href="/hashtag-generator" class="list-group-item list-group-item-action">Hashtag Generator</a>
+                        <a href="/title-generator" class="list-group-item list-group-item-action">Title Generator</a>
+                        <a href="/description-generator" class="list-group-item list-group-item-action">Description Generator</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tag Extractor Card -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card tool-card h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-search tool-icon"></i>
+                    <h3 class="h4 mb-3">Tag Extractor</h3>
+                    <p class="text-muted mb-4">Analyze competitor videos and extract SEO tags</p>
+                    <a href="/youtube-tags" class="btn btn-primary px-4">
+                        <i class="bi bi-binoculars me-2"></i>Analyze Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 fade-in">
+        <div class="col-lg-8 mx-auto text-center">
+            <div class="card border-0 bg-light">
+                <div class="card-body py-4">
+                    <h2 class="h4 mb-3">Why Choose Us?</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card border-0 bg-transparent">
+                                <div class="card-body">
+                                    <i class="bi bi-shield-check text-primary fs-2"></i>
+                                    <h3 class="h5 mt-2">Secure</h3>
+                                    <p class="small text-muted">100% privacy guaranteed</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 bg-transparent">
+                                <div class="card-body">
+                                    <i class="bi bi-lightning-charge text-primary fs-2"></i>
+                                    <h3 class="h5 mt-2">Fast</h3>
+                                    <p class="small text-muted">Instant results</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 bg-transparent">
+                                <div class="card-body">
+                                    <i class="bi bi-graph-up text-primary fs-2"></i>
+                                    <h3 class="h5 mt-2">Effective</h3>
+                                    <p class="small text-muted">Proven SEO strategies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

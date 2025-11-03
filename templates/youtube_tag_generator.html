@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}YouTube Tag Generator{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="my-4 text-center">YouTube Tag Generator</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <form id="tagGeneratorForm">
+                        <div class="mb-3">
+                            <label for="keywords" class="form-label">Enter Keywords (comma separated)</label>
+                            <textarea 
+                                class="form-control" 
+                                id="keywords" 
+                                rows="3"
+                                placeholder="e.g., tech review, gadgets, unboxing"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Generate Tags</button>
+                    </form>
+                    
+                    <div id="generatedTags" class="mt-4" style="display: none;">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5>Generated Tags:</h5>
+                            <button onclick="copyAllTags()" class="btn btn-sm btn-success">
+                                <i class="bi bi-clipboard"></i> Copy All
+                            </button>
+                        </div>
+                        <div id="tagsContainer" class="d-flex flex-wrap gap-2"></div>
+                    </div>
+                    
+                    <div id="tagError" class="alert alert-danger mt-3" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='tag_generator.js') }}"></script>
+{% endblock %} 

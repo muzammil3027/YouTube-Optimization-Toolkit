@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}YouTube Title Generator{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="my-4 text-center">YouTube Title Generator</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <form id="titleGeneratorForm">
+                        <div class="mb-3">
+                            <label for="keywords" class="form-label">Enter Keywords (comma separated)</label>
+                            <textarea 
+                                class="form-control" 
+                                id="keywords" 
+                                rows="3"
+                                placeholder="e.g., video editing, gaming setup, productivity tips"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Generate Titles</button>
+                    </form>
+                    
+                    <div id="generatedTitles" class="mt-4" style="display: none;">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5>Generated Titles:</h5>
+                            <button onclick="copyAllTitles()" class="btn btn-sm btn-success">
+                                <i class="bi bi-clipboard"></i> Copy All
+                            </button>
+                        </div>
+                        <div id="titlesContainer" class="list-group gap-2"></div>
+                    </div>
+                    
+                    <div id="titleError" class="alert alert-danger mt-3" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='title_generator.js') }}"></script>
+{% endblock %} 

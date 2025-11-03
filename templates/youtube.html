@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}YouTube Thumbnail Downloader{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="mb-4">YouTube Thumbnail Downloader</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <form id="youtubeForm" class="mb-4">
+                        <div class="input-group">
+                            <input type="text" id="youtubeUrl" class="form-control" placeholder="Enter YouTube Video URL" required>
+                            <button type="submit" class="btn btn-primary">Get Thumbnail</button>
+                        </div>
+                    </form>
+                    <div id="result" class="mt-4" style="display: none;">
+                        <img id="thumbnail" class="img-fluid mb-3" alt="Video Thumbnail">
+                        <div>
+                            <a id="downloadBtn" class="btn btn-success" href="/download/youtube/{{ video_id }}" download>
+                                Download Thumbnail
+                            </a>
+                        </div>
+                    </div>
+                    <div id="error" class="alert alert-danger mt-3" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='youtube.js') }}"></script>
+{% endblock %} 
